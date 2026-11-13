@@ -4,7 +4,7 @@
 
 > Documento de passagem para a equipe. Ele registra o que foi modificado ou adicionado desde o primeiro protótipo, explica as mecânicas atuais e aponta o que ainda não está implementado.
 
-**Estado documentado:** branch `main`, após o commit `139e95a`  
+**Estado documentado:** branch `main`, após a implementação do áudio dinâmico e da documentação técnica
 **Tecnologia:** HTML, CSS, JavaScript ES Modules e Canvas 2D  
 **Execução:** navegador local, sem dependências de framework
 
@@ -28,17 +28,25 @@ O projeto atual transformou essa base em um arcade de corrida com identidade bra
 - HUD pixelado com velocímetro, minimapa, nitro e integridade;
 - música original e som de motor em três camadas;
 - salvamento local de créditos, carro, preparação e recordes;
-- apresentação HTML navegável do projeto;
-- 84 testes automatizados no estado atual.
+- documentação técnica completa do projeto;
+- 82 testes automatizados do jogo no estado atual.
 
 ---
 
-## 2. Comparação visual
+## 2. Evolução comparativa
 
-| Primeiro protótipo | Jogo atual |
-| --- | --- |
-| ![Primeiro protótipo da corrida](../apresentacao/assets/prototipo-corrida.png) | ![Corrida atual em Brasília](../apresentacao/assets/corrida-atual.png) |
-| Corrida única, três carros disponíveis e interface inicial. | Motor retrabalhado, dez carros, cenário dinâmico, HUD final e multiplayer local. |
+| Dimensão | Primeiro protótipo | Jogo atual |
+| --- | --- | --- |
+| Estrutura | Corrida concentrada em uma página | Sistemas separados por responsabilidade |
+| Pista | Estrada desenhada diretamente no canvas | Segmentos pseudo-3D, curvas, relevo e profundidade |
+| Veículos | Três opções iniciais | Dez carros jogáveis, rivais e tráfego civil |
+| Mecânicas | Acelerar, frear e virar | Nitro, integridade, buracos, derrapagem, colisões e preparação |
+| Modos | Um jogador | Solo e versus local em tela dividida |
+| Cenário | Panorama com laterais vazias | Objetos projetados e cinco zonas progressivas |
+| Interface | HUD provisório | Velocímetro, minimapa, cronômetro e barras de status |
+| Áudio | Trilha inicial | Música e motor dinâmico em três camadas |
+| Persistência | Sem progressão consolidada | Créditos, recordes, carro e preparação salvos |
+| Validação | Testes manuais do conceito | 82 testes automatizados do jogo |
 
 ---
 
@@ -285,7 +293,7 @@ O modo versus é amistoso e não altera créditos ou recordes.
 
 ## 11. Garagem e frota
 
-![Garagem atual do Rua Livre](../apresentacao/assets/garagem-atual.png)
+![Conceito visual da garagem do Rua Livre](../assets/scenery/Garagem%20Rua%20Livre_%20Escolha%20Seu%20Carro.png)
 
 ### 11.1 Reformulação da garagem
 
@@ -561,13 +569,12 @@ O carregamento sanitiza dados inválidos e migra saves antigos quando possível.
 | `js/fullscreen.js` | Entrada e saída segura da Fullscreen API |
 | `assets/` | Carros, cenários, interface, áudio e telas |
 | `test/` | Testes determinísticos dos sistemas do jogo |
-| `apresentacao/` | Apresentação HTML do projeto |
 
 ---
 
 ## 21. Testes e verificações
 
-O projeto possui 84 testes automatizados no estado documentado.
+O projeto possui 82 testes automatizados do jogo no estado documentado.
 
 Cobertura principal:
 
@@ -586,8 +593,7 @@ Cobertura principal:
 - HUD, minimapa e velocímetro;
 - save e migração;
 - tela inicial;
-- multiplayer local;
-- apresentação HTML.
+- multiplayer local.
 
 Para executar:
 
@@ -684,7 +690,6 @@ Estas limitações devem permanecer claras para a equipe:
 | `e8912c9` | Centralização dos novos carros na plataforma |
 | `0bd2359` | Atualização geral dos recursos visuais |
 | `a90df66` | Som dinâmico de motor em três camadas |
-| `139e95a` | Apresentação HTML interativa do projeto |
 
 ---
 
@@ -700,12 +705,6 @@ Jogo:
 
 ```text
 http://127.0.0.1:4173/index.html
-```
-
-Apresentação:
-
-```text
-http://127.0.0.1:4173/apresentacao/index.html
 ```
 
 ---
